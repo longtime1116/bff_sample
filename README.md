@@ -11,17 +11,17 @@ Express GraphQL Server Now Running On localhost:4000/graphql
 
 ```js
 query getTopPageData {
-  top {
+  top(id: 1) {
     user {
       id
       name
     }
-    items {
-      user_id
+    todos {
       title
     }
   }
 }
+
 ```
 
 すると以下のような結果が帰ってきて右ペインに表示される
@@ -31,16 +31,14 @@ query getTopPageData {
   "data": {
     "top": {
       "user": {
-        "id": 1,
+        "id": "1",
         "name": "Tom"
       },
-      "items": [
+      "todos": [
         {
-          "user_id": 1,
           "title": "example1"
         },
         {
-          "user_id": 1,
           "title": "example2"
         }
       ]
@@ -52,5 +50,5 @@ query getTopPageData {
 curl で確認する際は、Content-Type の指定を忘れずに。
 
 ```bash
-$curl -H 'Content-Type:application/json' -X POST -d '{"query": "query { top { user { id name  } items { user_id title  }  }  }"}' localhost:4000/graphql'
+$curl -H 'Content-Type:application/json' -X POST -d '{"query": "query { top(id: 1) { user { id name  } todos { user_id title  }  }  }"}' localhost:4000/graphql
 ```
