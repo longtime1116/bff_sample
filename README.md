@@ -50,5 +50,5 @@ query getTopPageData {
 curl で確認する際は、Content-Type の指定を忘れずに。
 
 ```bash
-$curl -H 'Content-Type:application/json' -X POST -d '{"query": "query { top(id: 1) { user { id name  } todos { user_id title  }  }  }"}' localhost:4000/graphql
+$curl -H 'Content-Type:application/json' -X POST -d '{"query": "query { top(id: 1) { user { id name  } todos { userId title  }  }  }"}' localhost:4000/graphql
 ```
