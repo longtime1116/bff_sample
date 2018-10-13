@@ -61,7 +61,7 @@ const top_data = async user_id => {
 };
 
 const parse_user_id = params  => {
-  return parseInt((params.query.replace(/\s+/g, "").match(/top\(id:([0-9])+\)/) || [])[1]) || undefined
+  return parseInt(((params.query || "").replace(/\s+/g, "").match(/top\(id:([0-9])+\)/) || [])[1]) || undefined
 }
 
 const app = express();
