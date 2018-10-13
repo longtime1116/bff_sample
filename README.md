@@ -1,4 +1,6 @@
 # GraphQL API サーバ起動
+GraphQL API の機能を持つ API GateWay を起動する。
+(API GateWay から叩く各 API は[こちらのサービス](https://jsonplaceholder.typicode.com/)で代用している)
 
 以下でサーバを起動
 
