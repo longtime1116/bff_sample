@@ -1,0 +1,16 @@
+{
+  "name": "graphql",
+  "version": "1.0.0",
+  "main": "",
+  "repository": "git@github.com:longtime1116/bff_sample.git",
+  "license": "MIT",
+  "scripts": {
+    "start": "node ./api_gateway_server.js"
+  },
+  "dependencies": {
+    "express": "^4.16.4",
+    "express-graphql": "^0.6.12",
+    "graphql": "^14.0.2",
+    "sync-request": "^6.0.0"
+  }
+}
